@@ -24,7 +24,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 git clone https://github.com/likecoin/likecoin-chain --branch sheungwan --single-branch
 ```
-6. Go to likecoin-chain folder and run ``build.sh`` script:
+6. Go to ``likecoin-chain`` folder and run ``build.sh`` script:
 ```
 cd likecoin-chain
 ./scripts/build.sh
@@ -33,7 +33,7 @@ cd likecoin-chain
 ```
 wget https://gist.githubusercontent.com/nnkken/1d1b9d4aae4acb3d835dd3150f546d44/raw/4d97fd471b4bf3be8c5475efbc0361f4926e65e5/genesis.json
 ```
-8. Run init.sh script, replace <your_moniker> with your node name; enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write  mnemonic phrase in a safe place:
+8. Run ``init.sh`` script, replace ``<your_moniker>`` with your node name; enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write  mnemonic phrase in a safe place:
 ```
 ./scripts/init.sh <your_moniker> genesis.json 913bd0f4bea4ef512ffba39ab90eae84c1420862@34.82.131.35:26656 
 ```
