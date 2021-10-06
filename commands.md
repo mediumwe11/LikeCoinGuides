@@ -8,7 +8,7 @@ cd likecoin-chain
 1. Send tokens to another address (``<destination_address>`` begins with ``cosmos1``).
 ```
 docker-compose run --rm liked-command \
-   tx send validator <destination_address> <amount>nanolike \
+   tx bank send validator <destination_address> <amount>nanolike \
         --from validator \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
