@@ -84,6 +84,6 @@ docker-compose run --rm liked-command \
 ```
 10. Info about other types of commands.
 ```
-docker exec -it likechain_liked --help
+docker-compose run --rm liked-command --help
 ```
 You can verify if your transaction was successful with its hash in explorer: https://likecoin.bigdipper.live/transactions. If you see "Out Of Gas" error, try setting ``--fees`` parameter (as in "Unbond tokens" sample).
