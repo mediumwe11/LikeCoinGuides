@@ -1,5 +1,5 @@
 # LikeCoin
-Instructions on how to set up LikeCoin node and create validator.
+Instructions on how to set up LikeCoin node and create validator. This is my version of official guide (https://docs.like.co/validator/likecoin-chain-node/setup-a-node) with some extra steps which allow you to set up a node in a step-by-step mode.
 
 1. Update and upgrade packages:
 ```
@@ -22,7 +22,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 5. Clone LikeCoin project:
 ```
-git clone https://github.com/likecoin/likecoin-chain --branch fotan-1 --single-branch
+git clone https://github.com/likecoin/likecoin-chain --branch fotan-1.1 --single-branch
 ```
 6. Go to ``likecoin-chain`` folder and run ``build.sh`` script:
 ```
@@ -37,7 +37,7 @@ cp .env.template .env
 8. Open and modify ``.env`` file - follow instructions inside the file and the variables below:
 ```
 LIKECOIN_MONIKER="<change this for your node's name>"
-LIKECOIN_DOCKER_IMAGE="likecoin/likecoin-chain:fotan-1"
+LIKECOIN_DOCKER_IMAGE="likecoin/likecoin-chain:fotan-1.1"
 LIKECOIN_CHAIN_ID="likecoin-mainnet-2"
 LIKECOIN_GENESIS_URL="https://gist.githubusercontent.com/williamchong/de1bdf2b2a8f3bce50a4b5e46af26959/raw/4e21bff586771c849d22e1916bcb88c6463fbaa0/genesis.json"
 LIKECOIN_SEED_NODES="913bd0f4bea4ef512ffba39ab90eae84c1420862@34.82.131.35:26656,e44a2165ac573f84151671b092aa4936ac305e2a@nnkken.dev:26656"
