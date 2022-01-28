@@ -82,7 +82,14 @@ docker-compose run --rm liked-command \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-10. Info about other types of commands.
+10. Query address balance.
+```
+docker-compose run --rm liked-command \
+   query bank balances <address> \
+        --chain-id likecoin-mainnet-2 \
+        --node tcp://liked-service:26657
+```
+11. Info about other types of commands.
 ```
 docker-compose run --rm liked-command --help
 ```
