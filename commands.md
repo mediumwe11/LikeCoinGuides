@@ -54,7 +54,15 @@ docker-compose run --rm liked-command \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-7. Vote in proposal. You can find the ``<proposal_ID>`` in explorer: https://likecoin.bigdipper.live/proposals.
+7. Deposit funds to proposal. You can find the ``<proposal_ID>`` in explorer: https://likecoin.bigdipper.live/proposals.
+```
+docker-compose run --rm liked-command \
+    tx gov deposit <proposal_ID> <amount>nanolike  \
+        --from validator \
+        --chain-id likecoin-mainnet-2 \
+        --node tcp://liked-service:26657
+```
+8. Vote in proposal. You can find the ``<proposal_ID>`` in explorer: https://likecoin.bigdipper.live/proposals.
 ```
 docker-compose run --rm liked-command \
     tx gov vote <proposal_ID> <yes/no/no_with_veto/abstain> \
@@ -62,7 +70,7 @@ docker-compose run --rm liked-command \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-8. Unjail your validator.
+9. Unjail your validator.
 ```
 docker-compose run --rm liked-command \
    tx slashing unjail \
@@ -70,7 +78,7 @@ docker-compose run --rm liked-command \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-9. Edit your validator. ``details``, ``identity`` and ``website`` parameters are optional.
+10. Edit your validator. ``details``, ``identity`` and ``website`` parameters are optional.
 ```
 docker-compose run --rm liked-command \
     tx staking edit-validator \
@@ -82,14 +90,14 @@ docker-compose run --rm liked-command \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-10. Query address balance.
+11. Query address balance.
 ```
 docker-compose run --rm liked-command \
    query bank balances <address> \
         --chain-id likecoin-mainnet-2 \
         --node tcp://liked-service:26657
 ```
-11. Info about other types of commands.
+12. Info about other types of commands.
 ```
 docker-compose run --rm liked-command --help
 ```
