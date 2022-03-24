@@ -33,8 +33,33 @@ cd ~/likecoin-chain
 make -C deploy initialize-systemctl
 make -C deploy start-node
 ```
-7. Check your sync status and service logs:
+7. Check your sync status. Wait until you get ``"catching_up": false`` (this might take some time). 
 ```
 curl -s localhost:26657/status
+```
+8. Optionally, you can also check your service logs:
+```
 journalctl -u liked.service -f
 ```
+9. Add an operator key. Enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write mnemonic phrase in a safe place:
+```
+~/liked keys add <key_name> --keyring-backend file
+```
+10. Join the LikeCoin Discord server https://discord.gg/likecoin and request token in ``#faucet-testnet`` channel using ``/faucet <address>``
+11. Create validator:
+```
+~/liked tx staking create-validator \
+--amount=500000000000nanolike \
+--pubkey=$(~/liked tendermint show-validator) \
+--moniker=<moniker> \
+--commission-rate="0.10" \
+--commission-max-rate="0.50" \
+--commission-max-change-rate="0.05" \
+--min-self-delegation="500000000000" \
+--chain-id="likecoin-mainnet-2" \
+--from=<key_name> \
+--keyring-backend=file \
+--gas 200000 \
+--fees 1000000000nanoekil
+```
+12. Make sure you appeared in Testnet Explorer: https://likecoin-public-testnet-4.netlify.app/validators/
