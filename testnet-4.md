@@ -49,14 +49,14 @@ journalctl -u liked.service -f
 11. Create validator:
 ```
 ~/liked tx staking create-validator \
---amount=500000000000nanolike \
+--amount=500000000000nanoekil \
 --pubkey=$(~/liked tendermint show-validator) \
 --moniker=<moniker> \
 --commission-rate="0.10" \
 --commission-max-rate="0.50" \
 --commission-max-change-rate="0.05" \
 --min-self-delegation="500000000000" \
---chain-id="likecoin-mainnet-2" \
+--chain-id="likecoin-public-testnet-4" \
 --from=<key_name> \
 --keyring-backend=file \
 --gas 200000 \
