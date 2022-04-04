@@ -19,8 +19,8 @@ git clone https://github.com/likecoin/likecoin-chain.git --branch release/v1.x -
 4. Fill variables with appropriate data. Replace ``<moniker>`` with your node name:
 ```
 export MONIKER='<moniker>'
-export GENESIS_URL='https://raw.githubusercontent.com/oursky/testnets/master/likecoin-public-testnet-4/genesis.json'
-export LIKED_SEED_NODES='4f5ebbf796c5f2dc928d88f212e92671a7e224ab@20.205.224.107:26656,c45c18de6178d0face7e684e064c6022b2de0f16@20.24.152.136:26656'
+export GENESIS_URL='https://raw.githubusercontent.com/likecoin/testnets/master/likecoin-public-testnet-5/genesis.json'
+export LIKED_SEED_NODES='7a38dfc59eb43b27cf2cc87b46a43e76aeaaf012@20.205.224.107:26656,11c0d57ae2b37122bd8e7de82a1b92c87bf3d45a@20.24.152.136:26656'
 ```
 5. Execute setup script:
 ```
@@ -56,7 +56,7 @@ journalctl -u liked.service -f
 --commission-max-rate="0.50" \
 --commission-max-change-rate="0.05" \
 --min-self-delegation="500000000000" \
---chain-id="likecoin-public-testnet-4" \
+--chain-id="likecoin-public-testnet-5" \
 --from=<key_name> \
 --keyring-backend=file \
 --gas 200000 \
