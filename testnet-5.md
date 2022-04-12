@@ -62,4 +62,4 @@ journalctl -u liked.service -f
 --gas 200000 \
 --fees 1000000000nanoekil
 ```
-12. Make sure you appeared in Testnet Explorer: https://likecoin-public-testnet-4.netlify.app/validators/
+12. Make sure you appeared in Testnet Explorer: https://likecoin-public-testnet-5.netlify.app/validators
