@@ -1,4 +1,4 @@
-# LikeCoin
+# LikeCoin (depreciated guide)
 Instructions on how to set up LikeCoin node and create validator. This is my version of official guide (https://docs.like.co/validator/likecoin-chain-node/setup-a-node) with some extra steps which allow you to set up a node in a step-by-step mode.
 
 1. Update and upgrade packages:
