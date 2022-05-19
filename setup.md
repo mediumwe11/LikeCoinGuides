@@ -23,13 +23,14 @@ export LIKED_VERSION='2.0.0'
 cd ~/likecoin-chain
 make -C deploy setup-node
 ```
-5. Go to ``likecoin-chain``, create ``liked`` service and start it:
+5. Fill ``[statesync]`` section in ``~/.liked/config/config.toml`` file in order to quickly sync your node. Official enpoints are available here: https://docs.like.co/validator/likecoin-chain-node/setup-a-node
+6. Go to ``likecoin-chain``, create ``liked`` service and start it:
 ```
 cd ~/likecoin-chain
 make -C deploy initialize-systemctl
 make -C deploy start-node
 ```
-6. Check logs and wait until Executed block height reached the curent LikeCoin blockchain height (can be found here: https://likecoin.bigdipper.live/blocks). The process might take some time.
+7. Check logs and wait until Executed block height reached the curent LikeCoin blockchain height (can be found here: https://likecoin.bigdipper.live/blocks). The process might take some time.
 ```
 journalctl -u liked.service -f
 ```
@@ -37,12 +38,12 @@ You can also track your current block height using this command:
 ```
 curl -s localhost:26657/status
 ``` 
-7. Add an operator key. Enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write  mnemonic phrase in a safe place:
+8. Add an operator key. Enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write  mnemonic phrase in a safe place:
 ```
 ~/liked keys add <key_name> --keyring-backend file
 ```
-8. Send some LIKE tokens to your wallet, you can get them from exchange - Osmosis, Digifinex, or Liquid - or from https://liker.social/ where you get tokens for likes from other users). You need these tokens to pay fees and delegate to your validator.
-9. Once you node is synced, you are ready to create a validator. Enter your node moniker and the amount of tokens you want to delegate to your validator as well as your commision rate. Optionally, you can add extra parameters like ``--identity <IDENTITY>`` and ``--website <WEBSITE>``.
+9. Send some LIKE tokens to your wallet, you can get them from exchange - Osmosis, Digifinex, or Liquid - or from https://liker.social/ where you get tokens for likes from other users). You need these tokens to pay fees and delegate to your validator.
+10. Once you node is synced, you are ready to create a validator. Enter your node moniker and the amount of tokens you want to delegate to your validator as well as your commision rate. Optionally, you can add extra parameters like ``--identity <IDENTITY>`` and ``--website <WEBSITE>``.
 ```
 ~/liked tx staking create-validator \
 --amount=<amount>nanolike \
@@ -57,4 +58,4 @@ curl -s localhost:26657/status
 --keyring-backend=file \
 --gas-prices 10nanolike
 ```
-10. Track your node on this page: https://likecoin.bigdipper.live/validators.
+11. Track your node on this page: https://likecoin.bigdipper.live/validators.
