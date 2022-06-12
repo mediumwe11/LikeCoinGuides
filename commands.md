@@ -3,7 +3,7 @@ Useful commands for LikeCoin chain. Note: 1 LIKE = 1 000 000 000 nanolike.
 
 1. Send tokens to another address (``<destination_address>`` begins with ``like1``).
 ```
-~/liked tx bank send validator <destination_address> <amount>nanolike \
+~/liked tx bank send <key_name> <destination_address> <amount>nanolike \
         --from <key_name> \
         --chain-id likecoin-mainnet-2 \
         --fees 200000nanolike
