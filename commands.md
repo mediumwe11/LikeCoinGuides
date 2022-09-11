@@ -38,7 +38,7 @@ liked tx distribution withdraw-all-rewards \
 ```
 6. Withdraw validator rewards and validator commission from your validator.
 ```
-~/liked tx distribution withdraw-rewards <your_validator_address> --commission \
+liked tx distribution withdraw-rewards <your_validator_address> --commission \
         --from <key_name> \
         --chain-id likecoin-mainnet-2 \
         --fees 200000nanolike
