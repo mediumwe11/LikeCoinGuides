@@ -12,7 +12,7 @@ sudo apt install git curl make --yes
 ```
 3. Clone LikeCoin project:
 ```
-git clone https://github.com/likecoin/likecoin-chain.git --branch release/v2.x --single-branch
+git clone https://github.com/likecoin/likecoin-chain.git --branch release/v3.x --single-branch
 ```
 4. Set up variables. Replace ``<moniker>`` with your validator moniker:
 ```
