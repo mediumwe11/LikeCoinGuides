@@ -40,14 +40,14 @@ curl -s localhost:26657/status
 ``` 
 8. Add an operator key. Enter the password with at least 8 characters (you will use it to sign all transactions). **Important**: write  mnemonic phrase in a safe place:
 ```
-~/liked keys add <key_name> --keyring-backend file
+liked keys add <key_name> --keyring-backend file
 ```
 9. Send some LIKE tokens to your wallet, you can get them from exchange - Osmosis, Digifinex, or Liquid - or from https://liker.social/ where you get tokens for likes from other users). You need these tokens to pay fees and delegate to your validator.
 10. Once you node is synced, you are ready to create a validator. Enter your node moniker and the amount of tokens you want to delegate to your validator as well as your commision rate. Optionally, you can add extra parameters like ``--identity <IDENTITY>`` and ``--website <WEBSITE>``.
 ```
-~/liked tx staking create-validator \
+liked tx staking create-validator \
 --amount=<amount>nanolike \
---pubkey=$(~/liked tendermint show-validator) \
+--pubkey=$(liked tendermint show-validator) \
 --moniker=$MONIKER \
 --commission-rate="0.10" \
 --commission-max-rate="0.50" \
