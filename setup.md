@@ -19,7 +19,7 @@ git clone https://github.com/likecoin/likecoin-chain.git --branch release/v3.x -
 export MONIKER='<moniker>'
 export GENESIS_URL='https://raw.githubusercontent.com/likecoin/mainnet/master/genesis.json'
 export LIKED_SEED_NODES='913bd0f4bea4ef512ffba39ab90eae84c1420862@34.82.131.35:26656,e44a2165ac573f84151671b092aa4936ac305e2a@nnkken.dev:26656'
-export LIKED_VERSION='2.0.0'
+export LIKED_VERSION='3.0.0'
 cd ~/likecoin-chain
 make -C deploy setup-node
 ```
